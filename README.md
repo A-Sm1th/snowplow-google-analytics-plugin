@@ -56,6 +56,7 @@ function() {
       originalSendHitTask(sendModel);
       var request = new XMLHttpRequest();
       request.open('POST', path, true);
+      request.withCredentials = true;
       request.setRequestHeader('Content-type', 'text/plain; charset=UTF-8');
       request.send(payload);
     });
